@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace WorkNet.Concern {
@@ -12,6 +13,7 @@ namespace WorkNet.Concern {
         public ProjectStatus @ProjectStatus { get; set; }
         public DateTime ProjectStart { get; set; }
         public DateTime ProjectEnd { get; set; }
+        [Column(TypeName = "decimal(5, 2)")]
         public decimal Budget { get; set; }
 
     }

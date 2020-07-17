@@ -10,7 +10,6 @@ namespace WorkNet.Concern {
         public string Contact { get; set; }
         public string SkypeId { get; set; }
         public int CompanyId { get; set; }
-        public 
 
     }
 }
