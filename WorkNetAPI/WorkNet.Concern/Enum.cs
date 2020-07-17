@@ -4,8 +4,11 @@ using System.Text;
 
 namespace WorkNet.Concern {
     public enum ProjectStatus {
+        NotStarted,
         Pending,
         Ongoing,
         Completed
     }
+
+
 }
