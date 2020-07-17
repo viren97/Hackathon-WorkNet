@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import logo from './images/logo.png';
+import logo from './images/logo.jpg';
+import {Col} from 'reactstrap';
 import history from './history'
 export class Layout extends Component {
 static displayName = Layout.name;
@@ -8,13 +9,12 @@ handleClick = () => {
 }
   render () {
     return (
-      <div className="col-sm-8 layout">
-          <div className="col-xs-2 logo" onClick = {this.handleClick}>
+      <Col className="layout" xs = "8"> 
+          <Col xs = "2" className="logo" onClick = {this.handleClick}>
               <img src={logo} alt="Logo"></img>
-          </div>
+          </Col>
           {this.props.children}
-      </div>
-    
+      </Col>
     );
   }
 }
