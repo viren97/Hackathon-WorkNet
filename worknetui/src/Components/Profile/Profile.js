@@ -20,15 +20,13 @@ class Profile extends Component {
         <Col xs="2" className="profile-container">
             <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
             <DropdownToggle>
-                <p>"this.props.user.name"</p>
+                <p>Ruthvik</p>
                 <img className="profile-image" src={image} alt="Profile"/>
             </DropdownToggle>
             <DropdownMenu>
-                <DropdownItem onClick = {() =>this.redirect('/profile')}>
-                    <p>Profile</p>
-                </DropdownItem>
-                <DropdownItem onClick = {() =>this.redirect('/rides')}>Rides</DropdownItem>
-                <DropdownItem onClick = {() => logout()}> Logout</DropdownItem>
+                <DropdownItem onClick = {() =>this.redirect('/profile')}><p>Profile</p></DropdownItem>
+                <DropdownItem onClick = {() =>this.redirect('/rides')}><p>Rides</p></DropdownItem>
+                <DropdownItem onClick = {() => logout()}><p>Logout</p></DropdownItem>
             </DropdownMenu>
             </ButtonDropdown>
         </Col>
