@@ -15,7 +15,8 @@ import {
 } from 'reactstrap';
 import logo from './images/logo.jpg';
 import Profile from './Components/Profile/Profile';
-import history from './history'
+import history from './history';
+import { Col } from 'reactstrap';
 export class Layout extends Component {
 static displayName = Layout.name;
 
