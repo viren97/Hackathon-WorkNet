@@ -9,9 +9,7 @@ import {
   Carousel,
   CarouselItem,
   CarouselControl,
-  CarouselIndicators,
-  CarouselCaption,
-  Button
+  CarouselIndicators
 } from 'reactstrap';
 
 const items = [
@@ -29,7 +27,7 @@ const items = [
   }
 ];
 
-const Example = (props) => {
+const Home = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -94,4 +92,4 @@ const Example = (props) => {
   );
 }
 
-export default Example;
+export default Home;

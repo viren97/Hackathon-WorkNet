@@ -26,7 +26,7 @@ class Profile extends Component {
             <DropdownMenu>
                 <DropdownItem onClick = {() =>this.redirect('/profile')}><p>Profile</p></DropdownItem>
                 <DropdownItem onClick = {() =>this.redirect('/rides')}><p>Rides</p></DropdownItem>
-                <DropdownItem onClick = {() => logout()}> Logout</DropdownItem>
+                <DropdownItem onClick = {() => logout()}><p>Logout</p></DropdownItem>
             </DropdownMenu>
             </ButtonDropdown>
         </Col>

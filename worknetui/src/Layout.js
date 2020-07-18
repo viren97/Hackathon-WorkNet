@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -23,11 +24,9 @@ constructor(props) {
   super(props);
   this.state = {isOpen: false};
 }
+redirect = (url) => {
 
-handleClick = () => {
-history.push("/home");
 }
-
 
   toggle = () => this.setState({
     isOpen : ! this.state.isOpen
@@ -38,18 +37,17 @@ history.push("/home");
   showLoginRegister = () => {
     return(
     <React.Fragment>
-      <Button className = "login-register"> Register </Button>
-      <Button className = "login-register"> Login </Button>
+      <Link className = "login-register" to= "register"> Register </Link>
+      <Link className = "login-register" to= "login"> Login </Link>
     </React.Fragment>
     )
   }
   render () {
     return (
     <React.Fragment>
-
       <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand style={{ width: "10%", marginRight : "0"}} href="/"><img style={{ width: "88%"}} src={logo} alt="Logo"></img></NavbarBrand>
+        <NavbarBrand style={{ width: "10%", marginRight : "0"}} href="/home"><img style={{ width: "88%"}} src={logo} alt="Logo"></img></NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -78,7 +76,7 @@ history.push("/home");
             </UncontrolledDropdown>
           </Nav>
         </Collapse>
-        { false  ? this.showUser() : this.showLoginRegister()}
+        { true  ? this.showUser() : this.showLoginRegister()}
       </Navbar>
     </div>
     </React.Fragment>
