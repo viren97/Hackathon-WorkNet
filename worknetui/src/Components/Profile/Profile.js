@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { DropdownToggle, ButtonDropdown, DropdownMenu, DropdownItem, Col } from 'reactstrap';
 import { logout } from '../../Redux/Services/AuthenticationServices';
+import image from '../../images/profile.jpg'
 import history from './../../history'
 class Profile extends Component {
     constructor(props) {
@@ -16,11 +17,11 @@ class Profile extends Component {
         console.log('e');
     return (
        
-        <Col xs="4" className="profile-container">
+        <Col xs="2" className="profile-container">
             <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
             <DropdownToggle>
                 <p>"this.props.user.name"</p>
-                <img className="profile-image" src="https://www.searchpng.com/wp-content/uploads/2019/02/Men-Profile-Image-1024x941.png" alt="Profile"/>
+                <img className="profile-image" src={image} alt="Profile"/>
             </DropdownToggle>
             <DropdownMenu>
                 <DropdownItem onClick = {() =>this.redirect('/profile')}>
