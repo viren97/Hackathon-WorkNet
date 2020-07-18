@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
+using WorkNet.Concern;
 
 namespace WorkNet.Contract {
     public interface ICompanyServices {
-        void Register();
+        Task<Company> Register(CompanyModel company);
         void Update();
         void Delete();
         void GetAll();

@@ -41,7 +41,7 @@ namespace WorkNetAPI {
             services.AddScoped<IDataServices<User>, DataServices<User>>();
             services.AddScoped<IDataServices<Review>, DataServices<Review>>();
             services.AddScoped<IDataServices<Skill>, DataServices<Skill>>();
-            //services.AddScoped<ICompanyServices, CompanySevices>();
+            services.AddScoped<ICompanyServices, CompanySevices>();
             services.AddScoped<IEmailServices, EmailServices>();
             services.AddScoped<IProjectServices, ProjectServices>();
             services.AddScoped<IQuotationServices, QuotationServices>();
