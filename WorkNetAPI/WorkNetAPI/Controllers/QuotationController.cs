@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WorkNet.Concern;
 using WorkNet.Contract;
+using WorkNet.Provider;
 
 namespace WorkNetAPI.Controllers {
     [Route("api/[controller]")]

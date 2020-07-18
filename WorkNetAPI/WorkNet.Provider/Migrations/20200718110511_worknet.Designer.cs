@@ -10,8 +10,8 @@ using WorkNet.Provider;
 namespace WorkNet.Provider.Migrations
 {
     [DbContext(typeof(DataProvider))]
-    [Migration("20200718080013_init")]
-    partial class init
+    [Migration("20200718110511_worknet")]
+    partial class worknet
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
