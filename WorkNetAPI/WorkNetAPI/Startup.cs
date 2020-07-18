@@ -31,17 +31,17 @@ namespace WorkNetAPI {
                     Configuration.GetConnectionString("connection")));
 
             services.AddControllers();
-            services.AddScoped<IDataServices<Company>, DataServices<Company>>();
-            services.AddScoped<IDataServices<Address>, DataServices<Address>>();
-            services.AddScoped<IDataServices<ContactUs>, DataServices<ContactUs>>();
-            services.AddScoped<IDataServices<Project>, DataServices<Project>>();
-            services.AddScoped<IDataServices<ProjectCategory>, DataServices<ProjectCategory>>();
-            services.AddScoped<IDataServices<Quotation>, DataServices<Quotation>>();
-            services.AddScoped<IDataServices<QuotationRequested>, DataServices<QuotationRequested>>();
-            services.AddScoped<IDataServices<User>, DataServices<User>>();
-            services.AddScoped<IDataServices<Review>, DataServices<Review>>();
-            services.AddScoped<IDataServices<Skill>, DataServices<Skill>>();
-            services.AddScoped<ICompanyServices, CompanySevices>();
+            //services.AddScoped<IDataServices<Company>, DataServices<Company>>();
+            //services.AddScoped<IDataServices<Address>, DataServices<Address>>();
+            //services.AddScoped<IDataServices<ContactUs>, DataServices<ContactUs>>();
+            //services.AddScoped<IDataServices<Project>, DataServices<Project>>();
+            //services.AddScoped<IDataServices<ProjectCategory>, DataServices<ProjectCategory>>();
+            //services.AddScoped<IDataServices<Quotation>, DataServices<Quotation>>();
+            //services.AddScoped<IDataServices<QuotationRequested>, DataServices<QuotationRequested>>();
+            //services.AddScoped<IDataServices<User>, DataServices<User>>();
+            //services.AddScoped<IDataServices<Review>, DataServices<Review>>();
+            //services.AddScoped<IDataServices<Skill>, DataServices<Skill>>();
+            services.AddScoped<ICompanyServices, CompanyServices>();
             services.AddScoped<IEmailServices, EmailServices>();
             services.AddScoped<IProjectServices, ProjectServices>();
             services.AddScoped<IQuotationServices, QuotationServices>();

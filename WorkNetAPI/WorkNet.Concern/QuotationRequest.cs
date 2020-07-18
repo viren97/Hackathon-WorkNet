@@ -10,7 +10,6 @@ namespace WorkNet.Concern {
         public string Description { get; set; }
         public string SkillIds { get; set; }
         public DateTime Created { get; set; }
-        public ProjectStatus @ProjectStatus { get; set; }
         public DateTime ProjectStart { get; set; }
         public DateTime ProjectEnd { get; set; }
         [Column(TypeName = "decimal(5, 2)")]

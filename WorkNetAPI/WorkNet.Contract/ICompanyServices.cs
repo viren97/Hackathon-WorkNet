@@ -6,10 +6,10 @@ using WorkNet.Concern;
 
 namespace WorkNet.Contract {
     public interface ICompanyServices {
-        Task<Company> Register(CompanyModel company);
-        void Update();
-        void Delete();
-        void GetAll();
-        void GetById();
+        Task<Company> Register(CompanyModel company, string userId);
+        Task<Company> Update(CompanyModel cm);
+        Company Delete(int id);
+        List<Company> GetAll();
+        Task<Company> GetById(int id);
     }
 }
