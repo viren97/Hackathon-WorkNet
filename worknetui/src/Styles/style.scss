@@ -1,0 +1,17 @@
+.navbar {
+    .profile-container{
+        display: contents;
+        .btn-group{
+            button{
+                display: flex;
+                height: 44px;
+                p{
+                    margin: 1%;
+                }
+                img{
+                    height: 89%;
+                }
+            }
+        }
+    }
+}
