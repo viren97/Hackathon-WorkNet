@@ -1,10 +1,20 @@
-export const onChangeName=()=>{
+export const onChangeFirstName=()=>{
     return function(){
         var nameregx = /^[a-z]+$/i;
-        var name = document.getElementById('name').value;
+        var name = document.getElementById('firstName').value;
         var result = nameregx.test(name);
-        result?document.getElementById('name').style.border="2px solid green":
-        document.getElementById('name').style.border="2px solid red";
+        result?document.getElementById('firstName').style.border="2px solid green":
+        document.getElementById('firstName').style.border="2px solid red";
+    }
+}
+
+export const onChangeLastName=()=>{
+    return function(){
+        var nameregx = /^[a-z]+$/i;
+        var name = document.getElementById('lastName').value;
+        var result = nameregx.test(name);
+        result?document.getElementById('firstName').style.border="2px solid green":
+        document.getElementById('firstName').style.border="2px solid red";
     }
 }
 

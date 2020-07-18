@@ -11,21 +11,18 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
-  Button
+  DropdownItem
+
 } from 'reactstrap';
 import logo from './images/logo.jpg';
 import Profile from './Components/Profile/Profile';
 import history from './history';
 export class Layout extends Component {
 static displayName = Layout.name;
-
+ 
 constructor(props) {
   super(props);
   this.state = {isOpen: false};
-}
-redirect = (url) => {
-
 }
 
   toggle = () => this.setState({
@@ -45,6 +42,7 @@ redirect = (url) => {
   render () {
     return (
     <React.Fragment>
+
       <div>
       <Navbar color="light" light expand="md">
         <NavbarBrand style={{ width: "10%", marginRight : "0"}} href="/home"><img style={{ width: "88%"}} src={logo} alt="Logo"></img></NavbarBrand>

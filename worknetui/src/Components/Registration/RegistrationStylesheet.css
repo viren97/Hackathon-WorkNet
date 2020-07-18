@@ -11,13 +11,6 @@
     width: 63%;
 }
 
-#logo{
-    text-align: left;
-    padding: 0px;
-    margin: 0px;
-    margin-left: 7%;
-    margin-top: 3%;
-}
 #pickup-line{
     padding: 0px;
     transform: translate(5%,50%);
@@ -44,19 +37,59 @@
     color: #9319FF;
 }
 #signup-page-right{
-    float: left;
-    width: 32%;
-    height: 100vh;
-    background-color: #A8CCC9;
+    justify-content: center;
+    text-align: center;
+    width: 30%;
+    left: 5%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: 30.7em;
+    position: absolute;
+    height: 80vh;
 }
+#signup{
+    background-image: url('../../images/welcomeLogo.jpg');
+    background-size: cover;
+    width: 100%;
+    position: absolute; 
+    height: 91.5%;
+
+}
+
+#companySignup{
+    background-image: url('../../images/companyRegistrationBackground.jpg');
+    background-size: cover;
+    width: 100%;
+    position: absolute; 
+    height: 91.5%;
+    
+}
+
+#companyAddress{
+    float: left;
+    width: 45%;
+}
+#CompanyBasicDetails{
+    float: left;
+    width: 45%;
+}
+
+#company-signup-page-right{
+    justify-content: center;
+    width: 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+    height: 80vh;
+    left: 15%;
+}
+
 #signupForm{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 7%;
+    text-align: center;
+    margin-top: 5%;
 }
 #line{
     width: 10%;
@@ -86,7 +119,7 @@
     border: none;
     padding: 0px 25px;
     height: 7vh;
-    border-radius: 40px;
+    border-radius: 10px;
     margin-bottom: 17px;
     outline: none;
 }
@@ -95,11 +128,11 @@
     position: relative;
 }
 #signupForm label{
-    color: #D1D1D1;
+    color: #635f5f;
     font-family: 'Roboto', sans-serif;
     position: absolute;
-    top: 20px;
-    left: 120px;
+    top: 17px;
+    left: 140px;
     font-size: 15px;
     transition: .5s;
     pointer-events: none;
@@ -107,7 +140,7 @@
 #signupForm input:focus ~ label,
 #signupForm input:valid ~ label
 {
-    left: 100px;
+    left: 120px;
     top: 5px;
     font-size: 10px;
 }
@@ -117,7 +150,7 @@
     font-family:'Open Sans', sans-serif ;
     background-color: #16697A;
     color: white;
-    width: 27%;
+    width: 150px;
     height: 5vh;
     border-radius: 50px;
     margin-top: 20px;
@@ -155,7 +188,8 @@
 }
 #login-heading{
     color: #16697A;
-    margin-top: 50px;
+    text-align: center;
+    margin-top: 20px;
     font-family: 'Open Sans', sans-serif ;
 }
 #passwordMatch{

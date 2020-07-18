@@ -7,6 +7,7 @@ import history from './history';
 import { Provider } from 'react-redux';
 import { GlobalStore } from './Redux/GlobalStore';
 import App  from './App';
+import './Styles/style.scss'
 
 ReactDOM.render(
   <Provider store={GlobalStore}> 
