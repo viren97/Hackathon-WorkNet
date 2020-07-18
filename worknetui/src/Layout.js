@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -11,6 +12,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem
+
 } from 'reactstrap';
 import logo from './images/logo.jpg';
 import Profile from './Components/Profile/Profile';
@@ -22,24 +24,28 @@ constructor(props) {
   super(props);
   this.state = {isOpen: false};
 }
- 
-handleClick = () => {
-history.push("/home");
-}
- 
+
   toggle = () => this.setState({
     isOpen : ! this.state.isOpen
   })
   showUser = () => {
       return (<Profile/>);
   }
+  showLoginRegister = () => {
+    return(
+    <React.Fragment>
+      <Link className = "login-register" to= "register"> Register </Link>
+      <Link className = "login-register" to= "login"> Login </Link>
+    </React.Fragment>
+    )
+  }
   render () {
     return (
     <React.Fragment>
- 
+
       <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand style={{ width: "10%", marginRight : "0"}} href="/"><img style={{ width: "88%"}} src={logo} alt="Logo"></img></NavbarBrand>
+        <NavbarBrand style={{ width: "10%", marginRight : "0"}} href="/home"><img style={{ width: "88%"}} src={logo} alt="Logo"></img></NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -68,7 +74,7 @@ history.push("/home");
             </UncontrolledDropdown>
           </Nav>
         </Collapse>
-        { true  ? this.showUser() : null}
+        { true  ? this.showUser() : this.showLoginRegister()}
       </Navbar>
     </div>
     </React.Fragment>
