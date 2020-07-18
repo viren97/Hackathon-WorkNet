@@ -52,7 +52,7 @@ namespace WorkNet.Provider {
                 {
                     new Claim(JwtRegisteredClaimNames.Sub, auth.Email),
                 };
-                var signinkey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("c2FudGhvc2g="));
+                var signinkey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("c2FudGhvc2g=fadifhaiduhda"));
                 var token = new JwtSecurityToken(
                     issuer: "http://oec.com",
                     audience: "http://oec.com",

@@ -11,7 +11,7 @@ using WorkNet.Concern;
 using WorkNet.Contract;
 
 namespace WorkNetAPI.Controllers {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[Action]")]
     [ApiController]
     public class AuthenticationController : ControllerBase {
 

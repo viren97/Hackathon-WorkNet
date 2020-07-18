@@ -45,6 +45,7 @@ namespace WorkNetAPI {
             services.AddScoped<IEmailServices, EmailServices>();
             services.AddScoped<IProjectServices, ProjectServices>();
             services.AddScoped<IQuotationServices, QuotationServices>();
+            services.AddScoped<IAuthServices, AuthServices>();
             services.AddScoped<DataProvider, DataProvider>();
 
             services.AddIdentity<Representative, IdentityRole>()
@@ -76,7 +77,7 @@ namespace WorkNetAPI {
                  ValidateAudience = true,
                  ValidIssuer = "http://oec.com",
                  ValidAudience = "http://oec.com",
-                 IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MySuperSecureKey"))
+                 IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("c2FudGhvc2g=fadifhaiduhda"))
              };
          });
 
