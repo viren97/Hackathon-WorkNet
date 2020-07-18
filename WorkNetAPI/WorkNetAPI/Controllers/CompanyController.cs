@@ -23,6 +23,7 @@ namespace WorkNetAPI.Controllers {
             if (!ModelState.IsValid) {
                 return BadRequest(ModelState);
             }
+
             var claimsIdentity = this.User.Identity as ClaimsIdentity;
             var userId = claimsIdentity.FindFirst(ClaimTypes.Name)?.Value;
 
@@ -46,7 +47,7 @@ namespace WorkNetAPI.Controllers {
         [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, [FromBody] CompanyModel cm) {
-            return Ok(await CompanyServices.Update(cm));
+            return Ok(await CompanyServices.Update(cm, id));
 
         }
 

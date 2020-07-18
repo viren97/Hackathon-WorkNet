@@ -7,7 +7,7 @@ using WorkNet.Concern;
 namespace WorkNet.Contract {
     public interface ICompanyServices {
         Task<Company> Register(CompanyModel company, string userId);
-        Task<Company> Update(CompanyModel cm);
+        Task<Company> Update(CompanyModel cm, int id);
         Company Delete(int id);
         List<Company> GetAll();
         Task<Company> GetById(int id);

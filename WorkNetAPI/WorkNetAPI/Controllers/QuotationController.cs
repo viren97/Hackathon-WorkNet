@@ -32,7 +32,7 @@ namespace WorkNetAPI.Controllers {
             var userId = claimsIdentity.FindFirst(ClaimTypes.Name)?.Value;
 
 
-            var data = await QS.Create(qr, userId);
+            var data = await QS.CreateRequest(qr, userId);
 
             if (data != null)
                 return Created($"api/quotation/{data.Id}", data);
@@ -50,8 +50,10 @@ namespace WorkNetAPI.Controllers {
         // PUT api/<ValuesController>/5
         [Authorize]
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] CompanyModel cm) {
-            return Ok(await CompanyServices.Update(cm));
+        public async Task<IActionResult> Put(int id, [FromBody] QuotationRequested qr) {
+            var claimsIdentity = this.User.Identity as ClaimsIdentity;
+            var userId = claimsIdentity.FindFirst(ClaimTypes.Name)?.Value;
+            return Ok(await QS.UpdateRequest(qr, id, userId));
 
         }
 

@@ -19,6 +19,7 @@ namespace WorkNet.Provider {
 
         public List<T> GetAll() {
             return Context.Set<T>().ToList();
+
         }
 
         public void Add(T entity) {
@@ -35,6 +36,7 @@ namespace WorkNet.Provider {
         public void Update(T entity) {
             Context.Entry(entity).State = EntityState.Modified;
             Context.SaveChanges();
+
         }
 
     }

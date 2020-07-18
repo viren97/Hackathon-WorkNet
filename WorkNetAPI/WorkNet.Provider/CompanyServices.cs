@@ -24,20 +24,15 @@ namespace WorkNet.Provider {
         public async Task<Company> Register(CompanyModel cm, string userId) {
             try {
                 var user = await UserManager.FindByIdAsync(userId);
+
+
                 var dbskills = Db.Skills.Select(s => s.Name).ToList();
                 var skills = cm.Skills.Where(s => !dbskills.Contains(s)).Select(s => new Skill() { Name = s });
 
                 await Db.AddRangeAsync(skills);
 
-                var executive = new Executive()
-                {
-                    Firstname = user.Firstname,
-                    Lastname = user.Lastname,
-                    Email = user.Email,
-                    Mobile = user.PhoneNumber,
-                };
+              
 
-                await Db.AddAsync(executive);
 
                 var company = new Company()
                 {
@@ -48,10 +43,19 @@ namespace WorkNet.Provider {
                     Sector = cm.Sector,
                     EmployeeCount = cm.EmployeeCount,
                     Established = cm.Established,
-                    PrimaryContactId = executive.Id,
                     SkillIds = string.Join(", ", skills.Select(s => s.Id))
                 };
 
+                var executive = new Executive()
+                {
+                    CompanyId = company.Id,
+                    Firstname = user.Firstname,
+                    Lastname = user.Lastname,
+                    Email = user.Email,
+                    Mobile = user.PhoneNumber,
+                };
+
+                await Db.AddAsync(executive);
                 await Db.AddAsync(company);
                 cm.Address.CompanyId = company.Id;
                 await Db.AddAsync(cm.Address);
@@ -64,10 +68,13 @@ namespace WorkNet.Provider {
 
         }
 
-        public async Task<Company> Update(CompanyModel cm) {
+        public async Task<Company> Update(CompanyModel cm, int id) {
             try {
 
-                var company = Db.Companies.Find(cm.Id);
+                var company = Db.Companies.Find(id);
+                if (company == null)
+                    return null;
+
                 var skills = cm.Skills.Select(s => new Skill() { Name = s });
 
                 await Db.Skills.AddRangeAsync(skills);
