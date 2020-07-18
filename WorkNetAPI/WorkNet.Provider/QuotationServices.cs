@@ -98,5 +98,72 @@ namespace WorkNet.Provider {
             }
 
         }
+
+        public async Task<Quotation> Create(Quotation qr, string userId) {
+            try {
+                var user = await UserManager.FindByIdAsync(userId);
+                var executive = await Db.Executives.FirstOrDefaultAsync(e => e.Email == user.Email);
+
+                qr.CompanyId = executive.CompanyId;
+
+                await Db.AddAsync(qr);
+
+                return qr;
+            }
+            catch (Exception ex) {
+                return null;
+            }
+
+        }
+
+        public async Task<Quotation> Update(Quotation qr, int id, string userId) {
+            try {
+                var dbQr = await Db.Quotations.FindAsync(id);
+
+                dbQr.Description = qr.Description;
+                dbQr.Budget = qr.Budget;
+                dbQr.RelaventProjectIds = qr.RelaventProjectIds;
+
+                Db.Update(dbQr);
+
+                return dbQr;
+            }
+            catch (Exception ex) {
+                return null;
+            }
+        }
+
+        public async Task<Quotation> Delete(int id) {
+            try {
+
+                var dbQr = await Db.Quotations.FindAsync(id);
+                Db.Remove(dbQr);
+
+                return dbQr;
+
+            }
+            catch (Exception ex) {
+                return null;
+            }
+        }
+
+        public async Task<Quotation> GetById(int id) {
+            try {
+                return await Db.Quotations.FindAsync(id);
+
+            }
+            catch (Exception ex) {
+                return null;
+            }
+        }
+
+        public async Task<List<Quotation>> GetAll() {
+            try {
+                return await Db.Quotations.ToListAsync();
+            }
+            catch (Exception ex) {
+                return null;
+            }
+        }
     }
 }
