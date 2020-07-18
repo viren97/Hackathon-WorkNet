@@ -15,8 +15,8 @@ function App() {
           {/* <Route path='/login' component={LoginSignup} />   
           <Route path='/signup' component={LoginSignup} />  */}
         </Layout>
-        <Route  path="/" component={ Profile }/>
-        <Route  path="/guestregistration" component={ GuestRegistration }/>
+        <Route exact path="/" component={ Profile }/>
+        <Route exact  path="/guestregistration" component={ GuestRegistration }/>
         {/* <Route exact path="/login" render={props => <Login />} />
         <Route exact path="/signup" render={props => <Signup />} /> */}
     </div>

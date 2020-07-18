@@ -11,13 +11,6 @@
     width: 63%;
 }
 
-#logo{
-    text-align: left;
-    padding: 0px;
-    margin: 0px;
-    margin-left: 7%;
-    margin-top: 3%;
-}
 #pickup-line{
     padding: 0px;
     transform: translate(5%,50%);
@@ -44,18 +37,30 @@
     color: #9319FF;
 }
 #signup-page-right{
-    float: left;
-    width: 32%;
+    justify-content: center;
+    text-align: center;
+    width: 30%;
     height: 100vh;
-    background-color: #A8CCC9;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 30.7em;
+    position: absolute;
+    height: 80vh;
 }
+#signup{
+    background-image: url('../../images/welcomeLogo.jpg');
+    background-size: cover;
+    width: 100%;
+    position: absolute; 
+    height: 91.5%;
+
+}
+
 #signupForm{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    text-align: center;
     margin-top: 7%;
 }
 #line{
@@ -98,8 +103,8 @@
     color: #D1D1D1;
     font-family: 'Roboto', sans-serif;
     position: absolute;
-    top: 20px;
-    left: 120px;
+    top: 17px;
+    left: 140px;
     font-size: 15px;
     transition: .5s;
     pointer-events: none;
@@ -107,7 +112,7 @@
 #signupForm input:focus ~ label,
 #signupForm input:valid ~ label
 {
-    left: 100px;
+    left: 120px;
     top: 5px;
     font-size: 10px;
 }
@@ -155,6 +160,7 @@
 }
 #login-heading{
     color: #16697A;
+    text-align: center;
     margin-top: 50px;
     font-family: 'Open Sans', sans-serif ;
 }

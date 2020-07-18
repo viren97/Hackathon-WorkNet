@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import { store } from '../../Redux/GlobalStore';
-import {onChangeName, onChangeEmail, onChangeMobile, onChangeGender, onChangePasswordStrength, onSubmitValidation} from './Validations'
+import {onChangeFirstName,onChangeLastName, onChangeEmail, onChangeMobile, onChangeGender, onChangePasswordStrength, onSubmitValidation} from './Validations'
 
 class Signup extends Component{
     constructor(props) {
@@ -51,9 +51,12 @@ class Signup extends Component{
             ...this.state,
             [event.target.name]: event.target.value
         });
-        if([event.target.name]=='name'){
-            this.props.onChangeName();
+        if([event.target.name]=='firstName'){
+            this.props.onChangeFirstName();
         }
+        else if([event.target.name]=='lastName'){
+            this.props.onChangeLastName();
+        } 
         else if([event.target.name]=='email'){
             this.props.onChangeEmail();
         }
@@ -78,6 +81,7 @@ class Signup extends Component{
 
     render(){
         return(
+            <div id="signup">
             <div id="signup-page-right">
                 <div id="login-heading">
                 <h2>Executive Sign Up</h2>
@@ -86,8 +90,16 @@ class Signup extends Component{
                     <form id="signupForm">
                     <div id="nameDiv" className="signupForm-elements">
                             <input type="text" 
-                            id="name"
-                            name="name"
+                            id="firstName"
+                            name="firstName"
+                                    onChange={this.handleOnChange}
+                                    required/>
+                            <label>Enter Name</label><br/>
+                        </div>
+                        <div id="nameDiv" className="signupForm-elements">
+                            <input type="text" 
+                            id="lastName"
+                            name="lastName"
                                     onChange={this.handleOnChange}
                                     required/>
                             <label>Enter Name</label><br/>
@@ -137,6 +149,8 @@ class Signup extends Component{
                     
                     </div>
                 </div>
+                </div>
+            
         )
     }
 }
@@ -145,7 +159,8 @@ class Signup extends Component{
      return{
         //  onToggle: (data)=> dispatch(toggleSignupLogin(data)),
         // onCreate: (data)=> dispatch(CreateUser(data)),
-        onChangeName : ()=>dispatch(onChangeName()),
+        onChangeFirstName : ()=>dispatch(onChangeFirstName()),
+        onChangeLastName : ()=>dispatch(onChangeLastName()),
         onChangeEmail : ()=> dispatch(onChangeEmail()),
         onChangeMobile : () =>dispatch(onChangeMobile()),
         onChangeGender : ()=>dispatch(onChangeGender()),
