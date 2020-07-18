@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using WorkNet.Concern;
 
 namespace WorkNet.Provider {
-    public class DataProvider : IdentityDbContext<Representative> {
+    public class DataProvider : IdentityDbContext<User> {
         public DataProvider(DbContextOptions<DataProvider> options) : base(options) {
 
         }
@@ -17,6 +17,7 @@ namespace WorkNet.Provider {
         public DbSet<Quotation> Quotations { get; set; }
         public DbSet<Review> Reviews { get; set; } 
         public DbSet<Skill> Skills { get; set; }
-        public DbSet<Representative> Representatives { get; set; }
+        public DbSet<User> AppUsers { get; set; }
+        public DbSet<Executive> Executives { get; set; }
     }
 }

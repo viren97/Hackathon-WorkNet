@@ -22,7 +22,7 @@ namespace WorkNetAPI.Controllers {
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(RepRegister rep) {
+        public async Task<IActionResult> Register(ExecutiveRegistration rep) {
             if (!ModelState.IsValid) {
                 return BadRequest(ModelState);
             }

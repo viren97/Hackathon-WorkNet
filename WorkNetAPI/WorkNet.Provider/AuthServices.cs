@@ -11,23 +11,24 @@ using WorkNet.Contract;
 namespace WorkNet.Provider {
     public class AuthServices : IAuthServices {
 
-        private readonly UserManager<Representative> @UserManager = null;
-        public AuthServices(UserManager<Representative> usermanager) {
+        private readonly UserManager<User> @UserManager = null;
+        public AuthServices(UserManager<User> usermanager) {
             UserManager = usermanager;
         }
 
-        public async Task<AppUser> Register(RepRegister representative) {
+        public async Task<AppUser> Register(ExecutiveRegistration representative) {
             var userName = await UserManager.FindByEmailAsync(representative.Email);
             if (userName != null) {
                 return new AppUser() { ErrorMessage = "Email already Exsit" };
             }
 
-            var user = new Representative()
+            var user = new User()
             {
                 UserName = representative.Email,
                 Email = representative.Email,
                 Firstname = representative.Firstname,
-                Lastname = representative.Lastname
+                Lastname = representative.Lastname,
+                PhoneNumber = representative.Mobile
             };
             var result = await UserManager.CreateAsync(user, representative.Password);
             if (result.Succeeded) {
