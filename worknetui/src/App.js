@@ -27,10 +27,10 @@ import { Button } from 'reactstrap';
 function App() {
   return (
       <div className="App">
-        {/* <Layout>    */}
+        <Layout>   
           {/* <Route path='/login' component={LoginSignup} />   
           <Route path='/signup' component={LoginSignup} />  */}
-        {/* </Layout> */}
+        </Layout>
         <Route  path="/" component={ Profile }/>
         {/* <Route exact path="/login" render={props => <Login />} />
         <Route exact path="/signup" render={props => <Signup />} /> */}
