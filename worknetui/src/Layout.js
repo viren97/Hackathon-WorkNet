@@ -11,12 +11,11 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText
+  Button
 } from 'reactstrap';
 import logo from './images/logo.jpg';
 import Profile from './Components/Profile/Profile';
 import history from './history';
-import { Col } from 'reactstrap';
 export class Layout extends Component {
 static displayName = Layout.name;
 
@@ -36,12 +35,16 @@ history.push("/home");
   showUser = () => {
       return (<Profile/>);
   }
+  showLoginRegister = () => {
+    return(
+    <React.Fragment>
+      <Button className = "login-register"> Register </Button>
+      <Button className = "login-register"> Login </Button>
+    </React.Fragment>
+    )
+  }
   render () {
-  
-
     return (
-
-
     <React.Fragment>
 
       <div>
@@ -75,7 +78,7 @@ history.push("/home");
             </UncontrolledDropdown>
           </Nav>
         </Collapse>
-        { true  ? this.showUser() : null}
+        { false  ? this.showUser() : this.showLoginRegister()}
       </Navbar>
     </div>
     </React.Fragment>

@@ -5,13 +5,57 @@
             button{
                 display: flex;
                 height: 44px;
+                &:hover{
+                    p{
+                        color:  #fff;
+                    }
+                }
                 p{
                     margin: 1%;
+                    color:  #16697a;
                 }
                 img{
                     height: 89%;
+                    border-radius: 20px;
                 }
             }
+            .btn-secondary {
+                color: #fff;
+                background-color: #fff;
+                border-color: #16697a;
+                border-radius: 20px;
+                &:hover{
+                    background-color: #16697a;
+                }
+            }
+            
         }
     }
+    .login-register {
+        background-color: #16697a;
+        color: #fff;
+        width: 7%;
+        border: none;
+        outline: none !important;
+        margin-right: 1%;
+    }
+}
+
+.App{
+    .card {
+        flex-direction: row;
+        img{
+            width: 51%;
+            margin: 5.2% 24.2% 0 24.2%;
+        }
+        p{
+            text-align: center;
+            font-size: 3vmax;
+            color: #16697a;
+        }
+    }
+
+}
+.rc-footer{
+    background-color: #16697a !important;
 }
