@@ -8,16 +8,18 @@ class ExecutiveProfile extends React.Component{
 
 render(){
     return(
-        <div id="companyProfile">
+        <div id="ExecutiveProfile">
             <div>
             <div id="ExecutiveCoverPicture">
             </div>
-            <div id="CompanyQuickDetails"> 
+            <div id="EmployeeQuickDetails"> 
             <div id="CompanyDp">
                 <img src={CompanyDP}></img>
             </div>
-            <div id="CompanyDetails">
-                
+            <div id="ExecutiveDetails">
+                <p>Ruthvik Kadiyala</p>
+                <p>9841651516</p>
+                <p>ruthwik.k@technovert.com</p>
             </div>
             </div>
         </div>

@@ -1,6 +1,9 @@
 #CompanyProfile{
     width: 90%;
 }
+#ExecutiveProfile{
+    width: 90%;
+}
 #CompanyDp{
     float: left;
     width: 10%;
@@ -12,6 +15,10 @@
 #CompanyQuickDetails{
     transform: translate(0px,110%);
     color: #687070;
+}
+#EmployeeQuickDetails{
+    transform: translate(0px,180%);
+    
 }
 .CompanyDetails{
     list-style: none;
@@ -38,6 +45,11 @@
 #CompanyDetails{
     width: 100%;
     transform: translate(0px,35%);
+}
+
+#ExecutiveDetails{
+    width: 100%;
+    transform: translate(0px,40%);
 }
 
 #CompanyProfileNavigationDiv{
