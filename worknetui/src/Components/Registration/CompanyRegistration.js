@@ -84,7 +84,7 @@ class companyRegistration extends Component{
             <div id="companySignup">
             <div id="company-signup-page-right">
                 <div id="login-heading">
-                    <h2>Company Registration</h2>
+                    <h2>COMPANY REGISTRATION</h2>
                 </div> 
                 
                     <form id="signupForm">

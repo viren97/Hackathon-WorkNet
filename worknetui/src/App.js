@@ -7,6 +7,7 @@ import CompanyRegistration from './Components/Registration/CompanyRegistration.j
 import './Components/Registration/RegistrationStylesheet.css';
 import Home from './Components/Home/Home'
 import Login from './Components/Login/Login'
+import SearchUI from './Components/SearchUI/SearchUI'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/home" component={Home}/>
           <Route exact path="/register" component={GuestRegistration}/>
           <Route exact path="/login" component={Login}/> 
+          <Route exact path="/search" component={SearchUI}/>
       </div>
   );
 }
