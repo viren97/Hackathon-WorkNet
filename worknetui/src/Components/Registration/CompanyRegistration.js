@@ -140,17 +140,32 @@ class companyRegistration extends Component{
                                 required/>
                         <label>Company Established</label><br/>
                         </div>
+                        <div id="confirmPasswordDiv" className="signupForm-elements">
+                        <input type="text" 
+                            id="identityNumber"
+                            name="identityNumber"
+                            onChange={this.handleOnChange}
+                                required/>
+                        <label>CIN</label><br/>
+                        </div>
                         </div>
                     <div id="companyAddress">
                         <div id="emailDiv" className="signupForm-elements">
                             <input type="text" 
-                            id="addressLine"
-                            name="addressLine"
+                            id="addressLine1"
+                            name="addressLine1"
                                     onChange={this.handleOnChange}
                                     required/>
-                            <label>Line </label><br/>
+                            <label>Line 1</label><br/>
                         </div>
-                        
+                        <div id="emailDiv" className="signupForm-elements">
+                            <input type="text" 
+                            id="addressLine2"
+                            name="addressLine2"
+                                    onChange={this.handleOnChange}
+                                    required/>
+                            <label>Line 2</label><br/>
+                        </div>
                         <div id="emailDiv" className="signupForm-elements">
                             <input type="text" 
                             id="addressCity"
