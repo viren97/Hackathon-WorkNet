@@ -1,5 +1,7 @@
 ﻿
 
+using WorkNet.Concern;
+
 namespace WorkNet.Concern {
     public class Executive {
         public int Id { get; set; }
