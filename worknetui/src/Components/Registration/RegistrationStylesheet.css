@@ -41,6 +41,7 @@
     text-align: center;
     width: 30%;
     left: 5%;
+    margin-top: 5%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -51,9 +52,10 @@
     background-image: url('../../images/welcomeLogo.jpg');
     background-size: cover;
     width: 100%;
-    position: absolute; 
-    height: 91.5%;
-
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    
 }
 
 #companySignup{
@@ -61,8 +63,9 @@
     background-size: cover;
     width: 100%;
     position: absolute; 
-    height: 91.5%;
-    
+    height: 100%;
+    z-index: -1;
+    height: 100vh;
 }
 
 #companyAddress{
@@ -77,6 +80,7 @@
 #company-signup-page-right{
     justify-content: center;
     width: 70%;
+    margin-top: 5%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -89,7 +93,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 #line{
     width: 10%;

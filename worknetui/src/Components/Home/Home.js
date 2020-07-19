@@ -29,7 +29,7 @@ const items = [
 
 const Home = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [animating, setAnimating] = useState(false);
+  const [animating, setAnimating] = useState(false); 
 
   const next = () => {
     if (animating) return;
