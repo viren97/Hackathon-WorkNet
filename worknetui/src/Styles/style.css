@@ -1,0 +1,189 @@
+.navbar {
+  z-index: 1;
+}
+
+.navbar .profile-container {
+  display: contents;
+}
+
+.navbar .profile-container .btn-group button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 44px;
+}
+
+.navbar .profile-container .btn-group button:hover {
+  color: white;
+  background-color: #16697a;
+}
+
+.navbar .profile-container .btn-group button:hover p {
+  color: #fff;
+}
+
+.navbar .profile-container .btn-group button p {
+  margin: 1%;
+  color: #16697a;
+}
+
+.navbar .profile-container .btn-group button img {
+  height: 89%;
+  border-radius: 20px;
+}
+
+.navbar .profile-container .btn-group .btn-secondary {
+  color: #fff;
+  background-color: #fff;
+  border-color: #16697a;
+  border-radius: 20px;
+}
+
+.navbar .profile-container .btn-group .btn-secondary:hover {
+  background-color: #16697a;
+}
+
+.navbar .login-register {
+  background-color: #16697a;
+  color: #fff;
+  width: 6%;
+  border: none;
+  outline: none !important;
+  margin-right: 1%;
+  padding: 0.6%;
+  border-radius: 7px;
+}
+
+.navbar a {
+  text-align: center;
+}
+
+.App .card {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.App .card img {
+  width: 51%;
+  margin: 5.2% 24.2% 0 24.2%;
+}
+
+.App .card p {
+  text-align: center;
+  font-size: 3vmax;
+  color: #16697a;
+}
+
+.rc-footer {
+  background-color: #16697a !important;
+  width: 100%;
+}
+
+.login-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+  width: 30%;
+  padding: 5% 2%;
+  margin: 6% 6% 0% 6%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.login-container h1 {
+  text-align: center;
+  color: #16697a;
+}
+
+.login-container h6, .login-container h4 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 3% 0 0 0;
+}
+
+.login-container .input-container {
+  margin: 7% 0;
+}
+
+.login-container .input-container input {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid black;
+  padding: 3% 3% 3% 1%;
+  color: #16697a;
+}
+
+.login-container .submit {
+  width: 37%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 1px solid #16697a;
+  color: #16697a;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 1% 0;
+  outline: none;
+  font-size: 19px;
+}
+
+.login-container .submit:hover {
+  color: #fff;
+  background-color: #16697a;
+}
+
+.login-container .password {
+  width: 100%;
+  border: 1px solid black;
+  padding: 0px 4px;
+  border-radius: 0;
+  margin-bottom: 17px;
+  outline: none;
+}
+
+.login-container .signup {
+  border: none;
+  width: 22%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #fff;
+  color: #16697a;
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2%;
+}
+
+.search .search-button {
+  border: none;
+  padding: 0.2% 2.33%;
+  background-color: #16697a;
+  color: white;
+  border-radius: 20px;
+  outline: none;
+}
+
+.search .search-bar {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 0.5% 13.4% 0.5% 1.4%;
+  margin-right: 1%;
+  outline: none;
+}
+/*# sourceMappingURL=style.css.map */
