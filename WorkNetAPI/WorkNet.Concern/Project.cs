@@ -15,6 +15,6 @@ namespace WorkNet.Concern {
         public decimal Cost { get; set; }
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
-        public string CategoryIds { get; set; }
+        public string Domain { get; set; }
     }
 }

@@ -23,5 +23,6 @@ namespace WorkNet.Concern {
         public string AwardIds { get; set; }
         public string ProductIds { get; set; }
         public string ReviewIds { get; set; }
+        public string ProjectDomains { get; set; }
     }
 }

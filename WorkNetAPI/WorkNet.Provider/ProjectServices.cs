@@ -25,6 +25,7 @@ namespace WorkNet.Provider
         {
             try
             {
+
                 return Db.Projects.ToList();
             }
             catch (Exception ex)
@@ -49,6 +50,8 @@ namespace WorkNet.Provider
             {
                 var project = Db.Projects.Find(id);
                 Db.Projects.Remove(project);
+                Db.SaveChangesAsync();
+
                 return project;
             }
             catch (Exception ex)
@@ -64,7 +67,15 @@ namespace WorkNet.Provider
             {
                 var project = Db.Projects.Find(concern.Id);
 
-                 Db.Projects.Update(project);
+                project.Domain = concern.Domain;
+                project.Description = concern.Description;
+                project.End = concern.End;
+                project.Start = concern.Start;
+                project.TechnologyIds = concern.TechnologyIds;
+                
+                Db.Projects.Update(project);
+                Db.SaveChangesAsync();
+
 
                 return project;
             }
@@ -76,9 +87,16 @@ namespace WorkNet.Provider
 
         public Project Add(Project concern)
         {
-            try
-            {
+            try {
+                var company = Db.Companies.Find(concern.VendorId);
+                if (company == null) {
+                    return null;
+                }
+
+                company.ProjectDomains = company.ProjectDomains + "," + concern.Domain;
                 Db.Add(concern);
+                Db.Update(company);
+                Db.SaveChangesAsync();
 
                 return concern;
             }

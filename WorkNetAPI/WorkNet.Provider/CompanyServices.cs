@@ -31,9 +31,6 @@ namespace WorkNet.Provider {
 
                 await Db.AddRangeAsync(skills);
 
-              
-
-
                 var company = new Company()
                 {
                     Name = cm.Name,
@@ -59,6 +56,7 @@ namespace WorkNet.Provider {
                 await Db.AddAsync(company);
                 cm.Address.CompanyId = company.Id;
                 await Db.AddAsync(cm.Address);
+                await Db.SaveChangesAsync();
 
                 return company;
             }
@@ -89,6 +87,7 @@ namespace WorkNet.Provider {
                 company.SkillIds += $", {skillIds}";
 
                 Db.Update(company);
+                await Db.SaveChangesAsync();
 
                 return company;
             }
@@ -119,6 +118,7 @@ namespace WorkNet.Provider {
             try {
                 var company = Db.Companies.Find(id);
                 Db.Companies.Remove(company);
+                Db.SaveChangesAsync();
                 return company;
             }
             catch (Exception ex) {

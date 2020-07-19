@@ -29,6 +29,7 @@ namespace WorkNet.Provider {
 
                 qr.CompanyId = executive.Id;
                 await Db.AddAsync(qr);
+                await Db.SaveChangesAsync();
                 return qr;
             }
              catch(Exception ex) {
@@ -54,6 +55,8 @@ namespace WorkNet.Provider {
                 dbQr.ProjectStart = dbQr.ProjectStart;
 
                 Db.Update(dbQr);
+                await Db.SaveChangesAsync();
+
 
                 return dbQr;
 
@@ -91,6 +94,8 @@ namespace WorkNet.Provider {
                 var quotationsForQR =  Db.Quotations.Where(q => q.QuotationRequestId == qr.Id).ToList();
                 Db.RemoveRange(quotationsForQR);
                 Db.Remove(qr);
+                await Db.SaveChangesAsync();
+
                 return qr;
             }
             catch(Exception ex) {
@@ -107,6 +112,8 @@ namespace WorkNet.Provider {
                 qr.CompanyId = executive.CompanyId;
 
                 await Db.AddAsync(qr);
+                await Db.SaveChangesAsync();
+
 
                 return qr;
             }
@@ -125,6 +132,8 @@ namespace WorkNet.Provider {
                 dbQr.RelaventProjectIds = qr.RelaventProjectIds;
 
                 Db.Update(dbQr);
+                await Db.SaveChangesAsync();
+
 
                 return dbQr;
             }
@@ -138,6 +147,8 @@ namespace WorkNet.Provider {
 
                 var dbQr = await Db.Quotations.FindAsync(id);
                 Db.Remove(dbQr);
+                await Db.SaveChangesAsync();
+
 
                 return dbQr;
 
