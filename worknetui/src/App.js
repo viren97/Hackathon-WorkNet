@@ -10,6 +10,7 @@ import './Components/Registration/RegistrationStylesheet.css';
 import './Components/Company/CompanyProfileStyleSheet.css'
 import Home from './Components/Home/Home'
 import Login from './Components/Login/Login'
+import SearchUI from './Components/SearchUI/SearchUI'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/login" component={Login}/> 
           <Route exact path="/companyprofile" component={CompanyProfile}/>
           <Route exact path="/executiveprofile" component={ExecutiveProfile}/> 
+          <Route exact path="/search" component={SearchUI}/>
       </div>
   );
 }

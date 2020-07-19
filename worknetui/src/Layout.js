@@ -14,9 +14,8 @@ import {
   DropdownItem
 
 } from 'reactstrap';
-import logo from './images/logo.jpg';
+import logo from './images/logo-removebg-preview.png';
 import Profile from './Components/Profile/Profile';
-import history from './history';
 export class Layout extends Component {
 static displayName = Layout.name;
  
@@ -44,37 +43,26 @@ constructor(props) {
     <React.Fragment>
 
       <div>
-      <Navbar color="light" light expand="md">
+      <Navbar  light expand="md">
         <NavbarBrand style={{ width: "10%", marginRight : "0"}} href="/home"><img style={{ width: "88%"}} src={logo} alt="Logo"></img></NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/about">Components</NavLink>
+              <NavLink href="/search">Search</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="/enterprise">Enterprise</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            <NavItem>
+              <NavLink href="/companyregistration">Company</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://github.com/viren97/Hackathon-WorkNet">GitHub</NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
-        { true  ? this.showUser() : this.showLoginRegister()}
+        { false  ? this.showUser() : this.showLoginRegister()}
       </Navbar>
     </div>
     </React.Fragment>

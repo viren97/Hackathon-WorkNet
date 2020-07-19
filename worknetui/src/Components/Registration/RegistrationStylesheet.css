@@ -39,9 +39,9 @@
 #signup-page-right{
     justify-content: center;
     text-align: center;
-    width: 30%;
-    left: 5%;
+    width: 40%;
     margin-top: 5%;
+    left: 2%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -55,7 +55,6 @@
     z-index: -1;
     position: absolute;
     height: 100%;
-    
 }
 
 #companySignup{
@@ -70,6 +69,7 @@
 
 #companyAddress{
     float: left;
+    margin-left: 7%;
     width: 45%;
 }
 #CompanyBasicDetails{
@@ -87,6 +87,7 @@
     position: relative;
     height: 80vh;
     left: 15%;
+    margin: 7% 0 0 0;
 }
 
 #signupForm{
@@ -104,7 +105,7 @@
 #alternative{
     display: flex;
     justify-content: center;
-    color: white;
+    color: black;
     margin-top: 15px;
 }
 #alternative h3{
@@ -115,7 +116,7 @@
     color: white;
 }
 #log-text{
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid black;
     cursor: pointer;
 }
 #signupForm input[type="text"],input[type="password"],select{
@@ -126,6 +127,8 @@
     border-radius: 10px;
     margin-bottom: 17px;
     outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
 }
 
 .signupForm-elements{
