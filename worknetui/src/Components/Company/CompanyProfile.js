@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import CompanyDP from '../../images/companyDisplayPicture.png';
+import InternalNavigation from './InternalProfileNavigation.js';
 
 
 
@@ -9,6 +10,7 @@ class CompanyProfile extends React.Component{
 
 render(){
     return(
+        
         <div id="CompanyProfile">
             <div>
             <div id="CompanyCoverPicture">
@@ -64,11 +66,7 @@ render(){
             </div>
         </div>
         <div id="CompanyProfileNavigationDiv" >
-            <ul id="CompanyProfileNavigation">
-                <li><Link className="profileNavigationLink" to="">Description</Link></li>
-                <li><Link className="profileNavigationLink" to="">Projects & Technologies</Link></li>
-                <li><Link className="profileNavigationLink" to="">About</Link></li>
-            </ul>
+            <InternalNavigation/>
         </div>
         </div>
             

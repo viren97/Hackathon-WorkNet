@@ -10,7 +10,7 @@
 }
 
 #CompanyQuickDetails{
-    transform: translate(0px,70%);
+    transform: translate(0px,110%);
     color: #687070;
 }
 .CompanyDetails{
@@ -37,41 +37,65 @@
 
 #CompanyDetails{
     width: 100%;
-    
+    transform: translate(0px,35%);
 }
 
 #CompanyProfileNavigationDiv{
     width: 100%;
     background-color: #ecf1f0;
+    margin-top: 17%;
 }
 
 #CompanyProfileNavigation{
     list-style: none;
     display: flex;
     padding: 0px;
-    margin-top: 8.5%;
 }
 
 #CompanyProfileNavigation li{
     padding-left: 40px;
     
-    
 }
+
 .profileNavigationLink{
     text-decoration: none;
 }
 
 #CompanyCoverPicture{
     width: 90%;
-    background-image: url('../../images/CompanyProfileCoverPicture.jpeg');
-    height: 20vh;
+    background-image: url('../../images/ExecutiveProfileCoverPicture.jpg');
+    height: 30vh;
     background-repeat: no-repeat;
     background-size: cover; 
-    background-position: center; 
+    background-position: bottom; 
     position: absolute;
+    border-radius: 10px;
     z-index: -1; 
 }
+#ExecutiveCoverPicture{
+    width: 90%;
+    height: 30vh;
+    background-image:url('../../images/ExecutiveProfileCoverPicture.jpg');
+    background-size: cover;
+    position: absolute;
+    background-position: top;
+    z-index: -1;
+    border-radius: 10px;
+}
+
 #CompanyCoverPicture img{
     width: 100%;
     height: 15vh;
 }
+.projectsDetails ul{
+    list-style: none;
+    color: #16697A;
+}
+.physicalAddress{
+    display: flex;
+    
+}
+.physicalAddress p{
+    padding-right: 10px;
+}
+

@@ -5,6 +5,7 @@ import {Route} from 'react-router-dom';
 import GuestRegistration from './Components/Registration/CompanyExecutiveSignup.js';
 import CompanyRegistration from './Components/Registration/CompanyRegistration.js';
 import CompanyProfile from './Components/Company/CompanyProfile.js';
+import ExecutiveProfile from './Components/UserProfile/ExecutiveProfile.js'
 import './Components/Registration/RegistrationStylesheet.css';
 import './Components/Company/CompanyProfileStyleSheet.css'
 import Home from './Components/Home/Home'
@@ -18,7 +19,8 @@ function App() {
           <Route exact path="/home" component={Home}/>
           <Route exact path="/register" component={GuestRegistration}/>
           <Route exact path="/login" component={Login}/> 
-          <Route exact path="/companyprofile" component={CompanyProfile}/> 
+          <Route exact path="/companyprofile" component={CompanyProfile}/>
+          <Route exact path="/executiveprofile" component={ExecutiveProfile}/> 
       </div>
   );
 }
